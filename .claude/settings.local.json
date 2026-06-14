@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\" | Where-Object { -not $_.PSIsContainer } | Select-Object -ExpandProperty FullName | ForEach-Object { $_.Replace\\(\"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\\", \"\"\\) } | Sort-Object)",
+      "PowerShell(docker compose *)",
+      "PowerShell(python --version)",
+      "PowerShell(python -m venv \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\.venv\")",
+      "PowerShell(& \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\.venv\\\\Scripts\\\\pip.exe\" install -r \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\requirements.txt\" --quiet)",
+      "PowerShell(& \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\.venv\\\\Scripts\\\\python.exe\" -m pip install --upgrade pip --quiet)",
+      "PowerShell(& \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\.venv\\\\Scripts\\\\pip.exe\" install --prefer-binary -r \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\requirements.txt\" --quiet 2>&1 | Select-Object -Last 20)",
+      "PowerShell(& \"C:\\\\Users\\\\USER\\\\OneDrive\\\\Desktop\\\\Projects\\\\SafeStep\\\\backend\\\\.venv\\\\Scripts\\\\python.exe\" -c \"import fastapi, sqlalchemy, asyncpg, geoalchemy2; print\\('core imports OK'\\)\")",
+      "PowerShell(docker exec safestep-db-1 *)",
+      "PowerShell(Start-Sleep -Seconds 4; Invoke-RestMethod \"http://localhost:8000/health\")",
+      "PowerShell(Invoke-RestMethod \"http://localhost:8000/api/safety/nyc/Williamsburg?time_bucket=late_night&traveler_type=solo\" | ConvertTo-Json -Depth 4)",
+      "PowerShell(npm *)",
+      "PowerShell(Invoke-RestMethod \"http://localhost:8000/api/safety/nyc/Brownsville?time_bucket=late_night&traveler_type=solo\")",
+      "PowerShell(\\(Invoke-RestMethod \"http://localhost:8000/api/safety/nyc/Brownsville?time_bucket=late_night&traveler_type=solo\"\\).llm_briefing)",
+      "PowerShell(Get-NetTCPConnection *)"
+    ]
+  }
+}
